@@ -12,16 +12,26 @@
             background: url('nissan2.jpg') no-repeat center center fixed;
             background-size: cover;
             text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         header {
             background-color: #c3002f;
             color: white;
             padding: 15px 20px;
             font-size: 24px;
         }
+
         .container {
             padding: 20px;
         }
+
         .car {
             background: white;
             margin: 20px auto;
@@ -30,19 +40,39 @@
             max-width: 800px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.7s ease-in-out forwards;
         }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         img {
             width: 100%;
             max-height: 500px;
             object-fit: cover;
             border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
         }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
         a {
             display: block;
             margin-top: 20px;
             color: #c3002f;
             text-decoration: none;
             font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #a00027;
         }
     </style>
 </head>
@@ -53,7 +83,7 @@
             <h2>Nissan GT-R</h2>
             <img src="gtr.jpg" alt="Nissan GT-R">
             <p>The Nissan GT-R is an iconic high-performance sports car, renowned for its speed, precision engineering, and cutting-edge technology. Under the hood, it boasts a hand-assembled twin-turbocharged V6 engine that delivers breathtaking acceleration and top-tier performance. With an advanced all-wheel-drive system, adaptive suspension, and aerodynamic design, the GT-R offers unparalleled handling and stability on both road and track. Inside, it features a driver-focused cockpit, premium materials, and state-of-the-art infotainment systems, ensuring a blend of luxury and functionality. The Nissan GT-R is more than just a car—it's a legend, pushing the limits of innovation and automotive excellence.</p>
-            <a href="nissan.html">Back to Home</a>
+            <a href="index.html">Back to Home</a>
         </div>
     </div>
 </body>

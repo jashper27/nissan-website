@@ -12,16 +12,32 @@
             background: url('navara2.jpg') no-repeat center center fixed;
             background-size: cover;
             text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         header {
             background-color: #c3002f;
             color: white;
             padding: 15px 20px;
             font-size: 24px;
+            animation: pulseGlow 1.5s infinite alternate;
         }
+
+        @keyframes pulseGlow {
+            from { box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+            to { box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); }
+        }
+
         .container {
             padding: 20px;
         }
+
         .car {
             background: white;
             margin: 20px auto;
@@ -30,19 +46,39 @@
             max-width: 800px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.7s ease-in-out forwards;
         }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         img {
             width: 100%;
             max-height: 500px;
             object-fit: cover;
             border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
         }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
         a {
             display: block;
             margin-top: 20px;
             color: #c3002f;
             text-decoration: none;
             font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #a00027;
         }
     </style>
 </head>
@@ -53,7 +89,7 @@
             <h2>Nissan Navara</h2>
             <img src="navara.jpg" alt="Nissan Navara">
             <p>The Nissan Navara is a powerful and durable pickup truck built for both adventure and tough working conditions. It features a rugged yet stylish design, offering a perfect balance of strength and sophistication. With its robust chassis and reinforced suspension, the Navara ensures a smooth and stable ride, whether on highways or off-road terrain. Equipped with a powerful turbocharged diesel engine, it delivers impressive towing capacity and fuel efficiency. Inside, the Navara provides a comfortable and tech-savvy cabin, complete with advanced safety features, intuitive infotainment, and spacious seating. Whether for work, travel, or everyday use, the Nissan Navara is engineered to handle it all with reliability and performance.</p>
-            <a href="nissan.html">Back to Home</a>
+            <a href="index.html">Back to Home</a>
         </div>
     </div>
 </body>

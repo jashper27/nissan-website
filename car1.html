@@ -11,7 +11,15 @@
             padding: 0;
             background-color: #f4f4f4;
             text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         header {
             background-color: #c3002f;
             color: white;
@@ -20,6 +28,7 @@
             position: relative;
             text-align: center;
         }
+
         .home-button {
             position: absolute;
             left: 20px;
@@ -31,13 +40,17 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            transition: background 0.3s ease-in-out;
         }
+
         .home-button:hover {
             background-color: #800020;
         }
+
         .container {
             padding: 20px;
         }
+
         .car {
             background: white;
             margin: 20px auto;
@@ -46,23 +59,49 @@
             max-width: 600px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.7s ease-in-out forwards;
         }
+
+        .car:nth-child(1) { animation-delay: 0.2s; }
+        .car:nth-child(2) { animation-delay: 0.4s; }
+        .car:nth-child(3) { animation-delay: 0.6s; }
+        .car:nth-child(4) { animation-delay: 0.8s; }
+        .car:nth-child(5) { animation-delay: 1s; }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         img {
             width: 100%;
             border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
         }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
         a {
             display: block;
             margin-top: 10px;
             color: #c3002f;
             text-decoration: none;
             font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #a00027;
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="nissan.html" class="home-button">Home</a>
+        <a href="index.html" class="home-button">Home</a>
         Vehicles
     </header>
     <div class="container">

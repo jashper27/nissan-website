@@ -11,13 +11,22 @@
             padding: 0;
             text-align: center;
             background-color: #f4f4f4;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         header {
             background-color: #c3002f;
             color: white;
             padding: 20px;
             font-size: 24px;
         }
+
         .container {
             padding: 20px;
             max-width: 500px;
@@ -26,7 +35,25 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.7s ease-in-out forwards;
         }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #c3002f;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+
         input, textarea {
             width: 100%;
             padding: 12px;
@@ -35,11 +62,20 @@
             border-radius: 5px;
             box-sizing: border-box;
             font-size: 16px;
+            transition: 0.3s;
         }
+
+        input:focus, textarea:focus {
+            border-color: #c3002f;
+            outline: none;
+            box-shadow: 0 0 5px rgba(195, 0, 47, 0.5);
+        }
+
         textarea {
             resize: none;
             height: 120px;
         }
+
         button {
             width: 100%;
             padding: 12px;
@@ -51,9 +87,15 @@
             cursor: pointer;
             transition: 0.3s;
         }
+
         button:hover {
             background-color: #a30026;
         }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
         .home-button {
             display: inline-block;
             margin-top: 20px;
@@ -63,7 +105,9 @@
             text-decoration: none;
             font-size: 18px;
             border-radius: 5px;
+            transition: background 0.3s ease-in-out;
         }
+
         .home-button:hover {
             background-color: #a30026;
         }
@@ -80,7 +124,7 @@
             <textarea placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
-        <a href="nissan.html" class="home-button">Home</a>
+        <a href="index.html" class="home-button">Home</a>
     </div>
 </body>
 </html>
