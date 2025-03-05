@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nissan Philippines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #c3002f;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .hero {
+            background-image: url('wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 590px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin-top: auto;
+        }
+    </style>
+    <script>
+        function navigateToCar() {
+            var selectedCar = document.getElementById("carSelect").value;
+            if (selectedCar) {
+                window.location.href = selectedCar + ".html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>Nissan Philippines</header>
+    <nav>
+        <a href="nissan.html">Home</a>
+        <a href="car1.html">Vehicles</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="hero">The Legend Continues</div>
+    <div class="container">
+        <h2>Select a Nissan Car</h2>
+        <select id="carSelect" onchange="navigateToCar()">
+            <option value="">-- Select a car --</option>
+            <option value="gtr">Nissan GT-R</option>
+            <option value="leaf">Nissan Leaf</option>
+            <option value="navara">Nissan Navara</option>
+            <option value="terra">Nissan Terra</option>
+            <option value="almera">Nissan Almera</option>
+        </select>
+    </div>
+    <footer>&copy; 2025 Nissan Philippines. All rights reserved.</footer>
+</body>
+</html>
